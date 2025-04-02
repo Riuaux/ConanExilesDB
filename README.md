@@ -14,6 +14,8 @@
 
 ## Why?
 
+> TL;DR: Local database using just the info I need.
+
 I want to make a simple web helper for Conan Exiles for materials required to build/create items/structures (and maybe, later on, a resource-calculator too, idk). There's some of those out there, but mostly are paginated (why??), inconsistent on results, or similar, so I'm trying to grab all the data from the game to just mount a local db and push some queries to get the results the way I want.
 
 To achieve this, clearly I need a db of the game, but I have not found any for this game that are just open-to-download (no web-scrapping or server-intercepts things), so I decided to try to do one. The game itself (rather Unity) encrypt the files so runtime-grabbing doesn't work (add xkcd pointers reference), but the free _Unity DevKit for Conan Sanbox on Epic Games for modders_ let you export the DataTables (a sort of manipulated tables from the locked OG db) as JSON so I though I could build my own db on MongoDB or even convert those JSON to SQL and mount a SQLite or PostresQL localhost to fulfill this neccesity. So, here I am, tinkering with node and JSON files to parse/merge/mod the open data and build my own.
