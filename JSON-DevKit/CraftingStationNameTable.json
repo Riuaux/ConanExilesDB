@@ -1,0 +1,856 @@
+[
+	{
+		"RowName": "89101",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89101_StationName\", \"Furnace\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89102",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89102_StationName\", \"Kiln\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89103",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89103_StationName\", \"Firebowl Cauldron\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89104",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89104_StationName\", \"Tannery\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89201",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89201_StationName\", \"Armorer\\'s Bench\")",
+		"StationIconOverlay": "/Game/Environment/Prototype/Textures/T_Dev_Icon_Overlay_ArmorworkingStation.T_Dev_Icon_Overlay_ArmorworkingStation",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89301",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89301_StationName\", \"Blacksmith\\'s Bench\")",
+		"StationIconOverlay": "/Game/Environment/Prototype/Textures/T_Dev_Icon_Overlay_MetalworkingStation.T_Dev_Icon_Overlay_MetalworkingStation",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89401",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89401_StationName\", \"Carpenter\\'s Bench\")",
+		"StationIconOverlay": "/Game/Environment/Prototype/Textures/T_Dev_Icon_Overlay_WoodworkingStation.T_Dev_Icon_Overlay_WoodworkingStation",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89901",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89901_StationName\", \"Wheel of Pain\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89951",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89951_StationName\", \"Sepulcher of Set\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89952",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89952_StationName\", \"Altar of Set\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89953",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89953_StationName\", \"Sanctum of Set\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89954",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89954_StationName\", \"Sepulcher of Set\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89955",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89955_StationName\", \"Altar of Set\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89961",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89961_StationName\", \"Pit of Yog\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89962",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89962_StationName\", \"Rift of Yog\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89963",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89963_StationName\", \"Abyss of Yog\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89964",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89964_StationName\", \"Pit of Yog\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89965",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89965_StationName\", \"Rift of Yog\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89971",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89971_StationName\", \"Shrine of Mitra\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89972",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89972_StationName\", \"Sanctuary of Mitra\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89973",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89973_StationName\", \"Temple of Mitra\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89974",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89974_StationName\", \"Shrine of Mitra\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89975",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89975_StationName\", \"Sanctuary of Mitra\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89911",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89911_StationName\", \"Wheel of Pain\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89912",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89912_StationName\", \"Wheel of Pain\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89913",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89913_StationName\", \"Wheel of Pain\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89811",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89811_StationName\", \"Trebuchet Base\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89812",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89812_StationName\", \"Trebuchet Frame\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89813",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89813_StationName\", \"Trebuchet\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18500",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18500_StationName\", \"Beehive\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18510",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18510_StationName\", \"Grinder\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18502",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18502_StationName\", \"Fish trap\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18503",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18503_StationName\", \"Shellfish trap\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18504",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18504_StationName\", \"Fermentation Barrel\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18505",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18505_StationName\", \"Fluid Press\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18506",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18506_StationName\", \"Dryer\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18509",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18509_StationName\", \"Stove\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89976",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89976_StationName\", \"Altar of Ymir\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89977",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89977_StationName\", \"Blooded Altar of Ymir\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89978",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89978_StationName\", \"Exalted Altar of Ymir\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89979",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89979_StationName\", \"Altar of Ymir\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89980",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89980_StationName\", \"Blooded Altar of Ymir\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18511",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18511_StationName\", \"Frost Temple Smithy\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18512",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18512_StationName\", \"Artisan\\'s Worktable\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18513",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18513_StationName\", \"Tanner\\'s Worktable\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18514",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18514_StationName\", \"Torturer\\'s Worktable\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18523",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18523_StationName\", \"Improved Armorer\\'s Bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18518",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18518_StationName\", \"Volcanic Forge\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18515",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18515_StationName\", \"Improved Stove\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18516",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18516_StationName\", \"Improved Furnace\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18517",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18517_StationName\", \"Improved Blacksmithing Station\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18519",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18519_StationName\", \"Compost Heap\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18520",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18520_StationName\", \"Planter\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18521",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18521_StationName\", \"Planter\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18522",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18522_StationName\", \"Planter\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89001",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89001_StationName\", \"Campfire\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18524",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18524_StationName\", \"Altar of the Bat\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "80945",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_80945_StationName\", \"Pleasure Place of Derketo\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "80946",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_80946_StationName\", \"Pleasure Dome of Derketo\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "80947",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_80947_StationName\", \"Pleasure Palace of Derketo\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "80941",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_80941_StationName\", \"Pleasure Place of Derketo\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "80942",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_80942_StationName\", \"Pleasure Dome of Derketo\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "8299",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_8299_StationName\", \"Khitan Artisan Table\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "80948",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_80948_StationName\", \"Bower of JhebbalSag\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "80949",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_80949_StationName\", \"Retreat of Jhebbal Sag\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "80950",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_80950_StationName\", \"Grove of Jhebbal Sag\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "80943",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_80943_StationName\", \"Bower of Jhebbal Sag\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "80944",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_80944_StationName\", \"Retreat of Jhebbal Sag\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "19001",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19001_StationName\", \"Animal Pen\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "19002",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19002_StationName\", \"Reinforced Animal Pen\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "19003",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19003_StationName\", \"Armored Animal Pen\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "19004",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19004_StationName\", \"Any Animal Pen\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89402",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89402_StationName\", \"Improved Carpenter\\'s Bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18999",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18999_StationName\", \"Dismantling Bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "92118",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_92118_StationName\", \"Temple of Ymir\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89000",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89000_StationName\", \"Any Armorer\\'s Bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18525",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18525_StationName\", \"Saddler\\'s Worktable\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18997",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18997_StationName\", \"Stables\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "92312",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_92312_StationName\", \"Improved Blacksmith\\'s Bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "0",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_0_StationName\", \"Handcrafted\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": true,
+		"UniqueCraftedAtMessage": "NSLOCTEXT(\"\", \"CraftingStationNameTable_0_UniqueCraftedAtMessage\", \"Handcrafted\")"
+	},
+	{
+		"RowName": "89305",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89305_StationName\", \"Convergence Trap\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18539",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18539_StationName\", \"Alchemy Bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18543",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18543_StationName\", \"Dyer\\'s Bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18544",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18544_StationName\", \"Tanner\\'s Table\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18545",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18545_StationName\", \"Tinker\\'s Bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18546",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18546_StationName\", \"Casting Table\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89302",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89302_StationName\", \"Any specialized blacksmith\\'s bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89303",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89303_StationName\", \"Any specialized carpenter\\'s bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89304",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89304_StationName\", \"Any specialized armorer\\'s bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18526",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18526_StationName\", \"Any blacksmith\\'s bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18527",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18527_StationName\", \"Any alchemiy bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18528",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18528_StationName\", \"Any carpenter\\'s bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "92311",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_92311_StationName\", \"Leyshrine Focal Point\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89981",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89981_StationName\", \"Nest of Zath\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89982",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89982_StationName\", \"Web of Zath\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89983",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89983_StationName\", \"Altar of Zath\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89984",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89984_StationName\", \"Nest of Zath\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89985",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_89985_StationName\", \"Web of Zath\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "15000",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_15000_StationName\", \"Orb of Nergal\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "899200",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_899200_StationName\", \"Leyshrine\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "899250",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_899250_StationName\", \"Leyshrine\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "899202",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_899202_StationName\", \"Leyshrine\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "899198",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_899198_StationName\", \"Leyshrine\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "185170",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_185170_StationName\", \"Forge Of the First Men\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "19640",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19640_StationName\", \"Sacrificial Stone\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": true,
+		"UniqueCraftedAtMessage": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19640_UniqueCraftedAtMessage\", \"Performed at Sacrificial Stone\")"
+	},
+	{
+		"RowName": "19641",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19641_StationName\", \"Soul Stone\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "19642",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19642_StationName\", \"Circle of Power\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": true,
+		"UniqueCraftedAtMessage": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19642_UniqueCraftedAtMessage\", \"Summoned at Circle of Power\")"
+	},
+	{
+		"RowName": "19643",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19643_StationName\", \"Shallow Grave\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": true,
+		"UniqueCraftedAtMessage": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19643_UniqueCraftedAtMessage\", \"Summoned at Shallow Grave\")"
+	},
+	{
+		"RowName": "19644",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19644_StationName\", \"Inscription Bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18550",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_18550_StationName\", \"Thaumaturgy Bench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "51033",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_51033_StationName\", \"Construction Hammer\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": true,
+		"UniqueCraftedAtMessage": "NSLOCTEXT(\"\", \"CraftingStationNameTable_51033_UniqueCraftedAtMessage\", \"Crafted with Construction Hammer\")"
+	},
+	{
+		"RowName": "19645",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19645_StationName\", \"FastTravelPortal\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": true,
+		"UniqueCraftedAtMessage": "NSLOCTEXT(\"\", \"CraftingStationNameTable_19645_UniqueCraftedAtMessage\", \"Enacted at Transportory Stone\")"
+	},
+	{
+		"RowName": "999998",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_999998_StationName\", \"SorcerySpell\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": true,
+		"UniqueCraftedAtMessage": "NSLOCTEXT(\"\", \"CraftingStationNameTable_999998_UniqueCraftedAtMessage\", \"Casted with an Arcane Staff\")"
+	},
+	{
+		"RowName": "999999",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_999999_StationName\", \"NoStation\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": true,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "44000",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_44000_StationName\", \"Guardian Assembly Station\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "44001",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_44001_StationName\", \"Servitor Assembly Station\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "44002",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_44002_StationName\", \"Servitor Assembly Station\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "44003",
+		"StationName": "NSLOCTEXT(\"\", \"CraftingStationNameTable_44003_StationName\", \"Golem Workbench\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "18540",
+		"StationName": "NSLOCTEXT(\"[795510664D6AAE10BA6647B711E2F014]\", \"3AD4D3BC4020D8B1441D10AFC81588CB\", \"Totem of Jhebbal Sag\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "10112",
+		"StationName": "NSLOCTEXT(\"[795510664D6AAE10BA6647B711E2F014]\", \"F36D9EE847E1E5D1482539962D30AF05\", \"Liu Fei\\'s Circle of Power\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "89814",
+		"StationName": "NSLOCTEXT(\"[795510664D6AAE10BA6647B711E2F014]\", \"8B4BB9324028789873B881817014B020\", \"Ballista\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	},
+	{
+		"RowName": "19005",
+		"StationName": "NSLOCTEXT(\"[795510664D6AAE10BA6647B711E2F014]\", \"8AF64A7942E6A8520EEA54AA3746F993\", \"Animal Pen or Stable\")",
+		"StationIconOverlay": "None",
+		"bUseUniqueCraftedAtMessage": false,
+		"UniqueCraftedAtMessage": ""
+	}
+]
