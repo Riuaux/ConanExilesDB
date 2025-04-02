@@ -46,13 +46,31 @@ if (destFolder == "") {
   console.warn(`${destFolder}`);
 }
 
-rl.close();
-
 let sourceFile = `${sourceFolder}/${sourceTable}.json`;
 let destFile = `${destFolder}/${sourceTable}${appendName}.json`;
 
-console.log(`\n>> Source:\t ${sourceFile}`);
-console.log(`>> Dest:\t ${destFile}\n`);
+console.log("");
+console.table({
+  Source: sourceFile,
+  Dest: destFile,
+});
+
+/**
+ * 1) Only remove NSLOCTEXT()
+ * 2) Only bind itemID to itemName
+ * 3) Both
+ */
+let option = await rl.question(
+  "\nChoose an option:\n\n1) Only remove NSLOCTEXT()\n2) Only bind itemID to itemName\n3) Both\n\n? "
+);
+if (["1", "2", "3"].includes(option)) {
+  console.warn(`${option}`);
+} else {
+  console.error(`Invalid option: ${option}`);
+  process.exit(1);
+}
+
+rl.close();
 
 // Loading source JSON file into memory
 
@@ -67,6 +85,9 @@ try {
   process.exit(1);
 }
 
-// Print just first result to test
-console.log(jsonDataTable[0].ShortDesc);
+// Declare functions
+
+async function removeNSLOCTEXT() {}
+
+async function bindItemNameToDataTable() {}
 
