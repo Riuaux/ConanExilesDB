@@ -75,7 +75,7 @@ function removeNSLOCTEXT() {
 function bindItemNameToDataTable() {
   // Loop for every json file added
   jsonDataTable.forEach((element) => {
-    // Search sourceTable for every "Ingredient" ID, from 1 to max 4 (Ingredient4ID)
+    // Search sourceTable for every "Ingredient-ID", from 1 to max 4 (Ingredient4ID)
     for (let i = 1; i <= 4; i++) {
       if (element[`Ingredient${i}ID`] != 0) {
         // Then, if found, and if not 0, search the bridgeTable for the item name under "ID_XX" property
@@ -84,8 +84,37 @@ function bindItemNameToDataTable() {
         });
 
         // Finally, add that found prop to the ingredient name
-        element[`Ingredient${i}Name`] = found.RowName;
+        element[`Ingredient${i}Name`] =
+          found?.RowName ??
+          `NotFound: ${
+            element[`Ingredient${i}ID`]
+          }, probly a Bazaar/DLC/BP item`;
       }
+    }
+
+    // Search sourceTable for every "Result-ID", from 1 to max 4 (Result4ID)
+    for (let i = 1; i <= 4; i++) {
+      if (element[`Result${i}ID`] != 0) {
+        // Then, if found, and if not 0, search the bridgeTable for the item name under "ID_XX" property
+        const found = jsonTemplateTable.find((item) => {
+          return item.ID_XX == element[`Result${i}ID`];
+        });
+
+        // Finally, add that found prop to the result name
+        element[`Result${i}Name`] =
+          found?.RowName ??
+          `NotFound: ${element[`Result${i}ID`]}, probly a Bazaar/DLC/BP item`;
+      }
+    }
+
+    // Same as above, but for the single "CatalystID"
+    if (element["CatalystID"] != 0) {
+      const found = jsonTemplateTable.find((item) => {
+        return item.ID_XX == element["CatalystID"];
+      });
+      element["CatalystName"] =
+        found?.RowName ??
+        `NotFound: ${element["CatalystID"]}, probly a Bazaar/DLC/BP item`;
     }
 
     // process.exit(1);
