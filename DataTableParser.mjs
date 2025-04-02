@@ -1,31 +1,42 @@
 import fs from "fs";
 import { readFile } from "fs/promises";
 
-// Name of the raw json file exported from Mod Editor
+// Name of the raw json file exported from DevKit
 // Usually are ItemTable, RecipesTable
 const table = "ItemTable";
+// const table = "RecipesTable";
+
 // Rows that contains NSLOCTEXT in its text
+// Usually are Name, ShortDesc, LongDesc | RecipeName, ShortDesc
 const prepend = ["Name", "ShortDesc", "LongDesc"];
+// const prepend = ["RecipeName", "ShortDesc"];
+
+// OG files exported from DevKit
+const sourceFolder = "./JSON-DevKit/";
+// Destination folder for parsed
+const destinationFolder = "./JSON-Parsed/";
 
 // Read the json file
 const jsonData = JSON.parse(
-  await readFile(new URL(`./${table}.json`, import.meta.url))
+  await readFile(new URL(`${sourceFolder}${table}.json`, import.meta.url))
 );
+
+// Container for parsed data that'll be saved
+const newJsonData = [];
 
 // Loop for every json file added
 jsonData.forEach((element) => {
   // Loop for every Row of prepend var
   for (let i = 0; i < prepend.length; i++) {
-    // Remove NSLOCTEXT... text data
     let newName = element[prepend[i]];
-    // Trim last chars remaining: a ")
     newName = newName
-    .slice(0, newName.length - 2)
-    .replace(
+      // Trim last chars (a double quote and a parenthesis)
+      .slice(0, newName.length - 2)
+      // Remove NSLOCTEXT... text data
+      .replace(
         `NSLOCTEXT("", "${table}_${element["RowName"]}_${prepend[i]}", "`,
         ""
-      )
-      ;
+      );
 
     // Overwrite old text data with parsed one
     element[prepend[i]] = newName;
@@ -40,30 +51,21 @@ jsonData.forEach((element) => {
       // Remove old "Name" property
       delete element["Name"];
     }
-
-    console.log(newName);
   }
 
-  process.exit(1);
-
-  return element;
+  // process.exit(1);
+  newJsonData.push(element);
 });
 
-// if (jsonData[0].ItemName == undefined) {
-//   console.log("ERROR: ItemName property not found 2");
-//   process.exit(1);
-// }
-
 // Set name for new parsed file
-const filename = `${table}_parsed.json`;
+const filename = `${destinationFolder}${table}_parsed.json`;
 
 // Write file to same dir ./
-fs.writeFile(filename, JSON.stringify(jsonData, null, 2), function (err) {
+fs.writeFile(filename, JSON.stringify(newJsonData, null, 2), function (err) {
   if (err) {
     console.log(err);
   }
 });
 
 // Show only 1st item of final parsed json data
-// console.log(jsonData[0]);
-
+console.log(newJsonData[0]);
