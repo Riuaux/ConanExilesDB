@@ -1,16 +1,24 @@
 import fs from "fs";
 import { readFile } from "fs/promises";
 
-// Name of the raw json file exported from Mod Editor
+// Name of the raw json file exported from DevKit
 // Usually are ItemTable, RecipesTable
-const table = "RecipesTable";
+const table = "ItemTable";
+// const table = "RecipesTable";
+
 // Rows that contains NSLOCTEXT in its text
 // Usually are Name, ShortDesc, LongDesc | RecipeName, ShortDesc
-const prepend = ["RecipeName", "ShortDesc"];
+const prepend = ["Name", "ShortDesc", "LongDesc"];
+// const prepend = ["RecipeName", "ShortDesc"];
+
+// OG files exported from DevKit
+const sourceFolder = "./JSON-DevKit/";
+// Destination folder for parsed
+const destinationFolder = "./JSON-Parsed/";
 
 // Read the json file
 const jsonData = JSON.parse(
-  await readFile(new URL(`./${table}.json`, import.meta.url))
+  await readFile(new URL(`${sourceFolder}${table}.json`, import.meta.url))
 );
 
 // Container for parsed data that'll be saved
@@ -50,7 +58,7 @@ jsonData.forEach((element) => {
 });
 
 // Set name for new parsed file
-const filename = `./JSON-Parsed/${table}_parsed.json`;
+const filename = `${destinationFolder}${table}_parsed.json`;
 
 // Write file to same dir ./
 fs.writeFile(filename, JSON.stringify(newJsonData, null, 2), function (err) {
@@ -61,4 +69,3 @@ fs.writeFile(filename, JSON.stringify(newJsonData, null, 2), function (err) {
 
 // Show only 1st item of final parsed json data
 console.log(newJsonData[0]);
-
