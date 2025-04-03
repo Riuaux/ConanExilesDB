@@ -7,7 +7,7 @@ import { readFile, writeFile } from "node:fs/promises";
 const rl = readline.createInterface({ input, output });
 
 let sourceFolder = await rl.question(
-  "\nFolder name where JSON files from DevKit are located? > "
+  "\nSource folder name where DevKit's JSON's are located [default: JSON-DevKit] > "
 );
 if (sourceFolder == "") {
   sourceFolder = "JSON-DevKit";
@@ -17,7 +17,7 @@ if (sourceFolder == "") {
 }
 
 let sourceTable = await rl.question(
-  "\nOriginal JSON file name (exclude '.json')? > "
+  "\nSource JSON filename/dataTable (exclude '.json') [default: RecipesTable] > "
 );
 if (sourceTable == "") {
   sourceTable = "RecipesTable";
@@ -37,7 +37,7 @@ if (sourceTable == "") {
 // }
 
 let destFolder = await rl.question(
-  "\nFolder name where to save the resulting file (must exist)? > "
+  "\nTarget folder name where to save the resulting file (must exist) [default: JSON-Parsed] > "
 );
 if (destFolder == "") {
   destFolder = "JSON-Parsed";
@@ -47,8 +47,8 @@ if (destFolder == "") {
 }
 
 let sourceFile = `${sourceFolder}/${sourceTable}.json`;
-let destFile = `${destFolder}/${sourceTable}_(operationName).json`;
 let templateFile = `${sourceFolder}/ItemNameToTemplateID.json`;
+let destFile = `${destFolder}/${sourceTable}_(operationName).json`;
 
 console.log("");
 console.table({
@@ -221,14 +221,9 @@ async function wirteFileToDisk(finalJson, operationName) {
 
 // Select option
 
-/**
- * 1) Only remove NSLOCTEXT()
- * 2) Only bind itemID to itemName
- * 3) Both
- */
 console.warn("\nChoose an option:");
 let option = await rl.question(
-  "\n1) Only remove NSLOCTEXT()\n2) Only bind itemID to itemName\n3) Both\n\n? > "
+  "\n1) Only remove NSLOCTEXT text.\n2) Only bind itemID to itemName (only valid for RecipesTable)\n3) Both operations\n\n? > "
 );
 console.log("");
 
