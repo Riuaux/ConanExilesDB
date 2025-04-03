@@ -1,16 +1,16 @@
 import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 
 // Prompting Files and Folders options
 
 const rl = readline.createInterface({ input, output });
 
 let sourceFolder = await rl.question(
-  "\nFolder name where JSON file is located? > "
+  "\nFolder name where JSON files from DevKit are located? > "
 );
 if (sourceFolder == "") {
-  sourceFolder = "./JSON-DevKit";
+  sourceFolder = "JSON-DevKit";
   console.warn(`Empty, using:\t ${sourceFolder}`);
 } else {
   console.warn(`${sourceFolder}`);
@@ -20,21 +20,21 @@ let sourceTable = await rl.question(
   "\nOriginal JSON file name (exclude '.json')? > "
 );
 if (sourceTable == "") {
-  sourceTable = "ItemTable";
+  sourceTable = "RecipesTable";
   console.warn(`Empty, using:\t ${sourceTable}`);
 } else {
   console.warn(`${sourceTable}`);
 }
 
-let appendName = await rl.question(
-  "\nString to append at the end of resulting file name? > "
-);
-if (appendName == "") {
-  appendName = "-parsed";
-  console.warn(`Empty, using:\t ${appendName}`);
-} else {
-  console.warn(`${appendName}`);
-}
+// let appendName = await rl.question(
+//   "\nString to append at the end of resulting file name? > "
+// );
+// if (appendName == "") {
+//   appendName = "parsed";
+//   console.warn(`Empty, using:\t ${appendName}`);
+// } else {
+//   console.warn(`${appendName}`);
+// }
 
 let destFolder = await rl.question(
   "\nFolder name where to save the resulting file (must exist)? > "
@@ -47,24 +47,28 @@ if (destFolder == "") {
 }
 
 let sourceFile = `${sourceFolder}/${sourceTable}.json`;
-let destFile = `${destFolder}/${sourceTable}${appendName}.json`;
+let destFile = `${destFolder}/${sourceTable}_(operationName).json`;
+let templateFile = `${sourceFolder}/ItemNameToTemplateID.json`;
 
 console.log("");
 console.table({
   Source: sourceFile,
   Dest: destFile,
+  Template: templateFile,
 });
 
 // Declare functions
 
-async function readJsonFile() {
+async function readJsonFile(srcFolder, srcTable) {
   console.warn("\nReading source JSON file...");
   let jsonDataTable = {};
+
+  const srcFile = `${srcFolder}/${srcTable}.json`;
 
   // Loading source JSON file into memory
   try {
     jsonDataTable = await JSON.parse(
-      await readFile(new URL(`${sourceFile}`, import.meta.url))
+      await readFile(new URL(`${srcFile}`, import.meta.url))
     );
 
     console.log("Done.");
@@ -141,7 +145,79 @@ async function removeNSLOCTEXT(dataTable, rowsArray) {
   return newJsonData;
 }
 
-async function bindItemNameToDataTable() {}
+async function bindItemNameToDataTable(dataTable) {
+  console.warn("\nBinding itemNames where ID belongs...");
+
+  if (sourceTable !== "RecipesTable") {
+    console.error(`By now, this only works for "RecipesTable"`);
+    console.log("");
+    process.exit(1);
+  }
+
+  const bindedJsonData = [];
+  const searchFor = ["Ingredient", "Result"];
+
+  // The JSON containing template itemName & XX_ID
+  const itemToTemplateFile = await readJsonFile(
+    sourceFolder,
+    "ItemNameToTemplateID"
+  );
+
+  dataTable.forEach((element) => {
+    // For every "Ingredient" and "Result"
+    for (let j = 0; j < searchFor.length; j++) {
+      // We know 1 is min and 4 is max of each
+      for (let i = 1; i <= 4; i++) {
+        const resultId = element[`${searchFor[j]}${[i]}ID`];
+
+        if (resultId != 0) {
+          const found = itemToTemplateFile.find((item) => {
+            return item.ID_XX == element[`${searchFor[j]}${[i]}ID`];
+          });
+
+          element[`${searchFor[j]}${[i]}Name`] =
+            found?.RowName ??
+            `NotFound: ${
+              element[`${searchFor[j]}${[i]}ID`]
+            }, probly a Bazaar/DLC/BP item`;
+        }
+      }
+    }
+
+    // For "Catalyst"
+    if (element.CatalystID != 0) {
+      const found = itemToTemplateFile.find((item) => {
+        return item.ID_XX == element.CatalystID;
+      });
+
+      element.CatalystName =
+        found?.RowName ??
+        `NotFound: ${element.CatalystID}, probly a Bazaar/DLC/BP item`;
+    }
+
+    // process.exit(1);
+    bindedJsonData.push(element);
+  });
+
+  console.log("Done.");
+
+  return bindedJsonData;
+}
+
+async function wirteFileToDisk(finalJson, operationName) {
+  console.warn("\nWriting file to disk...");
+
+  const filename = `${destFolder}/${sourceTable}_${operationName}.json`;
+
+  // Write file
+  writeFile(filename, JSON.stringify(finalJson, null, 2), function (err) {
+    if (err) {
+      console.log(err);
+    }
+  });
+
+  console.log("Done.");
+}
 
 // Select option
 
@@ -155,20 +231,30 @@ let option = await rl.question(
   "\n1) Only remove NSLOCTEXT()\n2) Only bind itemID to itemName\n3) Both\n\n? > "
 );
 console.log("");
+
 if (["1", "2", "3"].includes(option)) {
   console.warn(`${option}`);
-  switch (option) {
-    case "1":
-      const dataTable = await readJsonFile();
-      const rowsToAffect = await fillRowNames(dataTable[0]);
-      const clearJson = await removeNSLOCTEXT(dataTable, rowsToAffect);
-      console.log(clearJson[0].ShortDesc);
-      break;
-    case "2":
-      break;
-    case "3":
-      break;
+
+  const dataTable = await readJsonFile(sourceFolder, sourceTable);
+  const rowsToAffect = await fillRowNames(dataTable[0]);
+  let finalJson = {};
+  let operationName = "";
+
+  if (option == "1") {
+    finalJson = await removeNSLOCTEXT(dataTable, rowsToAffect);
+    operationName = "removeNSLOCTEXT";
+  } else if (option == "2") {
+    finalJson = await bindItemNameToDataTable(dataTable);
+    operationName = "bindItemNameToID";
+  } else if (option == "3") {
+    const bindedJson = await bindItemNameToDataTable(dataTable);
+    finalJson = await removeNSLOCTEXT(bindedJson, rowsToAffect);
+    operationName = "bothOps";
   }
+
+  await wirteFileToDisk(finalJson, operationName);
+
+  console.log("Finished.");
 } else {
   console.error(`Invalid option: ${option}`);
   process.exit(1);
