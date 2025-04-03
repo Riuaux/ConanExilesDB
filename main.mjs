@@ -80,24 +80,25 @@ async function readJsonFile(srcFolder, srcTable) {
   }
 }
 
-async function fillRowNames(dataTableItem) {
-  // Only use first item of json data, every other object muste be equal so it's unnecesary to check the rest
+async function fillRowNames(dataTable) {
   console.warn("\nFilling row names...");
 
   const rowNames = [];
 
-  for (let i = 0; i < Object.keys(dataTableItem).length; i++) {
-    const objKey = Object.keys(dataTableItem)[i];
-    const objVal = dataTableItem[objKey];
+  dataTable.forEach((element) => {
+    for (let i = 0; i < Object.keys(element).length; i++) {
+      const objKey = Object.keys(element)[i];
+      const objVal = element[objKey];
 
-    if (
-      typeof objVal === "string" &&
-      objVal.includes("NSLOCTEXT") &&
-      !rowNames.includes(objKey)
-    ) {
-      rowNames.push(objKey);
+      if (
+        typeof objVal === "string" &&
+        objVal.includes("NSLOCTEXT") &&
+        !rowNames.includes(objKey)
+      ) {
+        rowNames.push(objKey);
+      }
     }
-  }
+  });
 
   console.log("Done.");
 
@@ -231,7 +232,7 @@ if (["1", "2", "3"].includes(option)) {
   console.warn(`${option}`);
 
   const dataTable = await readJsonFile(sourceFolder, sourceTable);
-  const rowsToAffect = await fillRowNames(dataTable[0]);
+  const rowsToAffect = await fillRowNames(dataTable);
   let finalJson = {};
   let operationName = "";
 
@@ -249,11 +250,12 @@ if (["1", "2", "3"].includes(option)) {
 
   await wirteFileToDisk(finalJson, operationName);
 
+  console.log("\n\n---------------------------------");
   console.log("Finished.");
+  console.log("---------------------------------\n");
 } else {
   console.error(`Invalid option: ${option}`);
   process.exit(1);
 }
 
 rl.close();
-
