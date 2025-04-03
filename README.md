@@ -12,7 +12,7 @@
 
 > The project uses `writeFile` and that is **DESTRUCTIVE**, beacuse it overwrites the result file, so have a backup of your DTs if those are not the vanilla from DevKit.
 
-> Convert the parsed JSON file to SQL (many kinds) on https://www.convertjson.com/json-to-sql.htm
+> Convert the parsed JSON file to SQL (many kinds) on https://konbert.com/convert/json/to/sql (or https://www.convertjson.com/json-to-sql.htm if quota reached)
 
 ## Why?
 
