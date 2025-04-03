@@ -2,15 +2,17 @@
 
 ### Simple and minimal data parser for Conan Exiles databases of items and recipes.
 
-> Depends on `NodeJS fs/promises` so node is required to execute the `.mjs` files, just run `node somefile.msj`.
+> Depends on `Node.js fs/promises` so Node is required to execute the `.mjs` files, just run `node main.msj`.
 
-> Looks for folders named like `JSON-Parsed` (and similar, check the code) to save results, but just edit the file to skip that or create the folder in same dir.
+> Doesn't have a lot of error boundaries of the user input, so if you are typing a filename, or folder location, make sure it's a valid name and an existing dir.
 
-> It's not like a big prject, so some things must be changed manually/hardcoded by now.
+> It's not like a big prject, so some things could be improved but not by now.
 
-> It's assumed that the user knows the JSON structure of the DevKit DataTables (or can grab an idea of it) in order to modify/execute this files.
+> It's assumed that the user knows the JSON structure of the DevKit DataTables (or can grab an idea of it) in order to modify/execute this commands.
 
-> The project uses fs.writeFile that's **DESTRUCTIVE** beacuse it overwrites the result file, so have a backup of your DTs if those are not the vanilla from DevKit.
+> The project uses `writeFile` and that is **DESTRUCTIVE**, beacuse it overwrites the result file, so have a backup of your DTs if those are not the vanilla from DevKit.
+
+> Convert the parsed JSON file to SQL (many kinds) on https://www.convertjson.com/json-to-sql.htm
 
 ## Why?
 
@@ -22,13 +24,6 @@ To achieve this, clearly I need a db of the game, but I have not found any for t
 
 Are these files/db already on the wild, achieved by some Conan modder, just waiting for me to ask them in the Discord mod community if they could gift that to me? Probably yes. Have I asked? No, I could, but I'm having fun/stress dealing with this (will do if I give up or end up bored). Will this work? I don't know, at least until now, yes. Will I export/build/parse all the game DB? No way, mostly Recipes and Items and it's requirements. Will this be open for any random that, like me, wants a database of this game's items/recipes? Sure thing, that's why this repo is public.
 
-## File versions in this repo
-
-- Date of JSON extractions from DevKit: `2025-03-31`
-- Epic Games app - Conan Exiles DevKit version: `1311351.43706`
-- Epic Games Unreal Editor - Conan Sandbox version: `4.15.3-1311351+ue415-dw-osl`
-- Conan Exiles (Steam Build ID) version: `17669764`
-
 ## What it does
 
 - Uses the JSON files from DevKit's DataTables to export a new file with no "NSLOCTEXT..." strings, and formats it to be ready to convert to SQL or be imported to MongoDB.
@@ -36,6 +31,13 @@ Are these files/db already on the wild, achieved by some Conan modder, just wait
 
 ## May or may not be implemented
 
-- WIP: An option to parse files to bind item's ID to the desired DataTable using the dictionary `ItemNameToTemplateID`-DataTable, to have a single JSON file (source of truth) to be used as (heavy, ~30MB) local JSON database, avoiding the unreadability of the items names or IDs when making non-relational SQL queries.
-- WIP: Add automation to avoid setting DT names and columns/properties manually for each run.
+- Bring back a lot of comments that were deleted when refactoring.
+- WIP: An option to merge files to have a single JSON file (source of truth) to be used as (heavy, ~60MB) local JSON "database", avoiding the neccesity of making queries to a DB.
+- WIP: Add some sort of better automation on prompts to avoid typing DT names manually for each run.
 
+## File versions in this repo
+
+- Date of JSON extractions from DevKit: `2025-03-31`
+- Epic Games app - Conan Exiles DevKit version: `1311351.43706`
+- Epic Games Unreal Editor - Conan Sandbox version: `4.15.3-1311351+ue415-dw-osl`
+- Conan Exiles (Steam Build ID) version: `17669764`
